@@ -19,13 +19,13 @@ stages:
   jobs:
   - job: Devdeployjob
     steps:
-    - bash: echo devdeployjob
+    - bash: echo Devdeployjob
 - stage: QAdeploy
   dependsOn:Build
   jobs:
   - job: QAdeployjob
     steps:
-    - bash: echo QA firstjob
+    - bash: echo QAdeployjob
 - stage: Proddeploy
   dependsOn:
   - Devdeploy
@@ -33,4 +33,4 @@ stages:
   jobs:
   - job: Proddeployjob
     steps:
-    - bash: echo prod firstjob
+    - bash: echo proddeployjob
