@@ -13,6 +13,7 @@ steps:
   name: publickey
   inputs:
     secureFile: 'azure_rsa.pub'
+    retryCount: '5'
 
 - task: TerraformCLI@0
   inputs:
